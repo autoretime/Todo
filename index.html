@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            background: linear-gradient(to right, #FFDDD6 20%, #FFF9ED 20%, #FFF9ED 80%, #DBDBDB 80%);
+            font-size : 20px;
+            font-family: 'Times New Roman', Times, serif;
+            
+
+        }
+
+        .firstBlock{
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            background: linear-gradient(to right, #FFDDD6 50%, #DBDBDB 50%);
+            width: 865px;
+            height: 170px;
+            margin-top: 15px;
+        }
+
+        .secondBlock{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: auto;
+            height: auto;
+            margin-top: 15px;
+        }
+
+        .todo-wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: auto;
+            height: auto;
+        }
+
+        #taskList{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width:788px;
+        }
+        
+
+        button {            
+            color: white;
+            font-weight: bold;            
+            text-shadow: -1px -1px #000;            
+            padding: 10px, 15px;            
+            background-color: #000;
+            background-image: linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%), radial-gradient(190% 100% at 50% 0%, rgba(255,255,255,.7) 0%, rgba(255,255,255,.5) 50%, rgba(0,0,0,0) 50%);
+            background-repeat: no-repeat;
+            background-size: 200% 100%, auto;
+            background-position: 200% 0, 0 0;
+            box-shadow: rgba(0,0,0,.3) 0 2px 5px;
+            cursor: pointer;
+        } 
+        button:active {
+            top: 1px;
+            box-shadow: none;
+        }
+        button:hover {
+            transition: .5s linear;
+            background-position: -200% 0, 0 0;
+        }
+
+        input:focus, textarea:focus {
+            outline-style: solid;
+            outline-width: 2px;
+        }       
+    </style>
+</head>
+<body>
+    <div class="todo-wrapper">
+        <div class="firstBlock">
+             <h1>ToDo List</h1>
+             <label> 
+                 Todo
+                 <input type="text" id="taskInput" size="autosize">
+                 <button id="addTask"  disabled>Add Task</button>
+             </label>
+        </div>
+        <div class="secondBlock">
+            <h2>Task list</h2>
+            <ul id="taskList">
+
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
